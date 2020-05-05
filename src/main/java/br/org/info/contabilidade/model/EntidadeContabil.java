@@ -1,4 +1,4 @@
-package br.org.info.model;
+package br.org.info.contabilidade.model;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;

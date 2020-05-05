@@ -1,12 +1,12 @@
-package br.org.info.teste;
+package br.org.info.contabilidade.teste;
 
 import java.math.BigDecimal;
 import java.util.Calendar;
 
 import javax.persistence.EntityManager;
 
-import br.org.info.model.*;
-import br.org.info.util.Conexao;
+import br.org.info.contabilidade.model.*;
+import br.org.info.contabilidade.util.Conexao;
 
 public class PopulaBanco {
 

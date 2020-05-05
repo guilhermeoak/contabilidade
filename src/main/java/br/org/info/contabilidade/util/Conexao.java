@@ -1,4 +1,4 @@
-package br.org.info.util;
+package br.org.info.contabilidade.util;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

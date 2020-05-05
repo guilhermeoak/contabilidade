@@ -1,12 +1,13 @@
-package br.org.info.service;
+package br.org.info.contabilidade.service;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import br.org.info.model.EntidadeContabil;
-import br.org.info.util.Conexao;
-import jakarta.ws.rs.WebApplicationException;
+import br.org.info.contabilidade.model.EntidadeContabil;
+import br.org.info.contabilidade.util.Conexao;
+
+import javax.ws.rs.WebApplicationException;
 
 public class EntidadeContabilService {
 
@@ -14,7 +15,7 @@ public class EntidadeContabilService {
 
 	public List<EntidadeContabil> listarEmpresas() {
 		try {
-			String query = "from EntidadeContabil";
+			String query = "select * from EntidadeContabil";
 			List<EntidadeContabil> entidadesContabil = conexaoEM.createNativeQuery(query, EntidadeContabil.class)
 					.getResultList();
 			return entidadesContabil;

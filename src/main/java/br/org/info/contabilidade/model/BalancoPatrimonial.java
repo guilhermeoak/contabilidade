@@ -1,4 +1,4 @@
-package br.org.info.model;
+package br.org.info.contabilidade.model;
 
 import java.math.BigDecimal;
 import java.util.Calendar;

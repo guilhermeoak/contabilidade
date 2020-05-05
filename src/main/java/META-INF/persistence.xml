@@ -9,8 +9,8 @@
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
 		<!-- Aqui são listadas todas as entidades -->
-		<class> br.org.info.model.EntidadeContabil  </class>
-		<class> br.org.info.model.BalancoPatrimonial  </class>
+		<class>br.org.info.contabilidade.model.EntidadeContabil  </class>
+		<class>br.org.info.contabilidade.model.BalancoPatrimonial  </class>
 
 		<properties>
 			<!-- Propriedades JDBC -->

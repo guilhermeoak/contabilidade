@@ -1,4 +1,4 @@
-package br.org.info.model;
+package br.org.info.contabilidade.model;
 
 public enum TipoPessoa {
 

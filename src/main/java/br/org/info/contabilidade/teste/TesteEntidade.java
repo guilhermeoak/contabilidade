@@ -1,10 +1,10 @@
-package br.org.info.teste;
+package br.org.info.contabilidade.teste;
 
 import javax.persistence.EntityManager;
 
-import br.org.info.model.EntidadeContabil;
-import br.org.info.model.TipoPessoa;
-import br.org.info.util.Conexao;
+import br.org.info.contabilidade.model.EntidadeContabil;
+import br.org.info.contabilidade.model.TipoPessoa;
+import br.org.info.contabilidade.util.Conexao;
 
 public class TesteEntidade {
 
