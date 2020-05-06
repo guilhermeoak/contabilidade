@@ -16,9 +16,9 @@ public class EntidadeContabilService {
 	public List<EntidadeContabil> listarEmpresas() {
 		try {
 			String query = "select * from EntidadeContabil";
-			List<EntidadeContabil> entidadesContabil = conexaoEM.createNativeQuery(query, EntidadeContabil.class)
+			List<EntidadeContabil> entidadesContabieis = conexaoEM.createNativeQuery(query, EntidadeContabil.class)
 					.getResultList();
-			return entidadesContabil;
+			return entidadesContabieis;
 		} catch (Exception e) {
 			throw new WebApplicationException(500);
 		}

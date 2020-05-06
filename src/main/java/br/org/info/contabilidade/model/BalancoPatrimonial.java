@@ -35,7 +35,7 @@ public class BalancoPatrimonial {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Calendar horaCadastro;
 
-	public long getId() {
+	public Integer getId() {
 		return id;
 	}
 

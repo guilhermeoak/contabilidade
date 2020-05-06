@@ -1,6 +1,7 @@
 package br.org.info.contabilidade.teste;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 import java.util.Calendar;
 
 import javax.persistence.EntityManager;
@@ -31,6 +32,8 @@ public class PopulaBanco {
 		balanco2.calculaPatrimonioLiquido();
 		balanco2.setHoraCadastro(Calendar.getInstance());
 		balanco2.setEntidadeContabil(entidade2);
+		
+		entidade2.setBalancoPatrimonial(Arrays.asList(balanco2));
 
 		conexaoEM.getTransaction().begin();
 		conexaoEM.persist(entidade2);

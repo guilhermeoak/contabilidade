@@ -1,18 +1,21 @@
 package br.org.info.contabilidade.model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class EntidadeContabil {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Integer id;
 
 	private String nomeFantasia;
 	private String razaoSocial;
@@ -20,11 +23,14 @@ public class EntidadeContabil {
 	@Enumerated(EnumType.STRING)
 	private TipoPessoa tipoPessoa;
 
-	public long getId() {
+	@OneToMany
+	private List<BalancoPatrimonial> balancoPatrimonial;
+
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -50,6 +56,14 @@ public class EntidadeContabil {
 
 	public void setTipoPessoa(TipoPessoa tipoPessoa) {
 		this.tipoPessoa = tipoPessoa;
+	}
+
+	public List<BalancoPatrimonial> getBalancoPatrimonial() {
+		return balancoPatrimonial;
+	}
+
+	public void setBalancoPatrimonial(List<BalancoPatrimonial> balancoPatrimonial) {
+		this.balancoPatrimonial = balancoPatrimonial;
 	}
 
 }

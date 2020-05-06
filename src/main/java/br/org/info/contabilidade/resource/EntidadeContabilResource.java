@@ -10,7 +10,7 @@ import javax.ws.rs.core.MediaType;
 import br.org.info.contabilidade.model.EntidadeContabil;
 import br.org.info.contabilidade.service.EntidadeContabilService;
 
-@Path(value="/listar")
+@Path(value="/listarEmpresas")
 public class EntidadeContabilResource {
 
 	@GET
