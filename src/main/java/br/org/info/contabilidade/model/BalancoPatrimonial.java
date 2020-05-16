@@ -18,9 +18,6 @@ public class BalancoPatrimonial {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	@ManyToOne
-	private EntidadeContabil entidadeContabil;
-
 	private BigDecimal ativo;
 	private BigDecimal ativoCirculante;
 
@@ -41,14 +38,6 @@ public class BalancoPatrimonial {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public EntidadeContabil getEntidadeContabil() {
-		return entidadeContabil;
-	}
-
-	public void setEntidadeContabil(EntidadeContabil entidadeContabil) {
-		this.entidadeContabil = entidadeContabil;
 	}
 
 	public BigDecimal getAtivo() {

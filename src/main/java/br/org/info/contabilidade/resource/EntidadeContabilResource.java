@@ -6,6 +6,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import br.org.info.contabilidade.model.EntidadeContabil;
 import br.org.info.contabilidade.service.EntidadeContabilService;
@@ -15,9 +16,9 @@ public class EntidadeContabilResource {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<EntidadeContabil> listarEmpresas() {
+	public Response listarEmpresas() {
 		List<EntidadeContabil> empresasListadas = new EntidadeContabilService().listarEmpresas();
-		return empresasListadas;
+		return Response.ok(empresasListadas).build();
 	}
 
 }

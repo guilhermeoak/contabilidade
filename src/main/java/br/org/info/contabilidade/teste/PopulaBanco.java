@@ -31,7 +31,7 @@ public class PopulaBanco {
 		balanco2.calculaTotalPassivo();
 		balanco2.calculaPatrimonioLiquido();
 		balanco2.setHoraCadastro(Calendar.getInstance());
-		balanco2.setEntidadeContabil(entidade2);
+		//balanco2.setEntidadeContabil(entidade2);
 		
 		entidade2.setBalancoPatrimonial(Arrays.asList(balanco2));
 

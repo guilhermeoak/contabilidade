@@ -17,14 +17,14 @@ public class EntidadeContabil {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
+	@OneToMany
+	private List<BalancoPatrimonial> balancoPatrimonial;
+
 	private String nomeFantasia;
 	private String razaoSocial;
 
 	@Enumerated(EnumType.STRING)
 	private TipoPessoa tipoPessoa;
-
-	@OneToMany
-	private List<BalancoPatrimonial> balancoPatrimonial;
 
 	public Integer getId() {
 		return id;
@@ -32,6 +32,14 @@ public class EntidadeContabil {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public List<BalancoPatrimonial> getBalancoPatrimonial() {
+		return balancoPatrimonial;
+	}
+
+	public void setBalancoPatrimonial(List<BalancoPatrimonial> balancoPatrimonial) {
+		this.balancoPatrimonial = balancoPatrimonial;
 	}
 
 	public String getNomeFantasia() {
@@ -56,14 +64,6 @@ public class EntidadeContabil {
 
 	public void setTipoPessoa(TipoPessoa tipoPessoa) {
 		this.tipoPessoa = tipoPessoa;
-	}
-
-	public List<BalancoPatrimonial> getBalancoPatrimonial() {
-		return balancoPatrimonial;
-	}
-
-	public void setBalancoPatrimonial(List<BalancoPatrimonial> balancoPatrimonial) {
-		this.balancoPatrimonial = balancoPatrimonial;
 	}
 
 }
